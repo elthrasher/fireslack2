@@ -39,7 +39,7 @@ Add mappings to `system-config.ts`
 
 (optional to verify) `ng serve`
 
-Make `src/firebase.ts` file
+Make `src/app/firebase.ts` file
 
     import {
         AuthMethods,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from './navbar';
-// import { AuthService } from './shared/auth.service';
+import { AuthService } from './shared/auth.service';
 
 @Component({
   moduleId: module.id,
@@ -12,14 +12,14 @@ import { NavbarComponent } from './navbar';
 export class Fireslack2AppComponent {
   title = 'fireslack2 works!';
   
-  // constructor(private auth: AuthService) {}
+  constructor(private auth: AuthService) {}
 
-  // signOut(): void {
-  //   this.auth.signOut();
-  //   window.location.replace('/');
-  // }
+  signOut(): void {
+    this.auth.signOut();
+    window.location.replace('/');
+  }
   
-  // signInWithGithub(): void {
-  //   this.auth.signInWithGithub();
-  // }
+  signInWithGithub(): void {
+    this.auth.signInWithGithub();
+  }
 }
