@@ -4,6 +4,7 @@ import { ROUTER_PROVIDERS } from '@angular/router';
 import { Fireslack2AppComponent, environment } from './app/';
 import { FIREBASE_APP_PROVIDERS } from './app/firebase';
 import { AuthService, AuthRouteHelperService, AUTH_PROVIDERS } from './app/shared';
+import { CHANNEL_PROVIDERS } from './app/channels'
 
 if (environment.production) {
   enableProdMode();
@@ -12,6 +13,7 @@ if (environment.production) {
 const providers: any[] = [
   AUTH_PROVIDERS,
   FIREBASE_APP_PROVIDERS,
+  CHANNEL_PROVIDERS,
   ROUTER_PROVIDERS
   //, provide(APP_BASE_HREF, {useValue: '/'})
 ];

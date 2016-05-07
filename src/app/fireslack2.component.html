@@ -1,7 +1,13 @@
 <app-navbar [authenticated]="auth.authenticated"
-      (signOut)="signOut()" (signInWithGithub)="signInWithGithub()"></app-navbar>
-<div class="container">
-  <div class="starter-template">
-    <h1>{{ title }}</h1>
+  (signOut)="signOut()" (signInWithGithub)="signInWithGithub()"></app-navbar>
+<div class="container-fluid main-container" *ngIf="auth.authenticated">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-sm-9">
+      <app-messages></app-messages>
+    </div>
   </div>
 </div>
+<app-welcome class="main-container" *ngIf="!auth.authenticated" (signInWithGithub)="signInWithGithub()"></app-welcome>
