@@ -10,7 +10,7 @@ import { Component, OnInit, ChangeDetectionStrategy, EventEmitter, Input, Output
 export class NavbarComponent implements OnInit {
   @Input() authenticated: boolean;
   @Output() signOut: EventEmitter<any> = new EventEmitter(false);
-  // @Output() signInWithGithub: EventEmitter<any> = new EventEmitter(false);
+  @Output() signInWithGithub: EventEmitter<any> = new EventEmitter(false);
   
   constructor() {}
 

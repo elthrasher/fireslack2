@@ -1,10 +1,4 @@
-import {
-  AuthMethods,
-  defaultFirebase,
-  FIREBASE_PROVIDERS,
-  firebaseAuthConfig
-} from 'angularfire2';
-
+import { AuthMethods, defaultFirebase, FIREBASE_PROVIDERS, firebaseAuthConfig } from 'angularfire2';
 
 export const FIREBASE_APP_PROVIDERS: any[] = [
   FIREBASE_PROVIDERS,
@@ -13,3 +7,5 @@ export const FIREBASE_APP_PROVIDERS: any[] = [
     method: AuthMethods.Popup
   })
 ];
+
+// 404 not found firebase

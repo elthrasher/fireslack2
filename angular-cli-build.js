@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   return new Angular2App(defaults, {
     vendorNpmFiles: [
       'ng2-bootstrap/**/*.js',
-      'firebase/lib/*.js',
+      'firebase/**/*.js',
       'angularfire2/**/*.js',
       'systemjs/dist/system-polyfills.js',
       'systemjs/dist/system.src.js',
