@@ -15,7 +15,6 @@ export class ChannelsComponent {
   }
   
   clear(): void {
-    console.log('clear');
     this.newChannelName = '';
   }
   
