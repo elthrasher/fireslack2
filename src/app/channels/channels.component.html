@@ -4,6 +4,7 @@
   </div>
   <div class="col-xs-12" *ngFor="#channel of channelService.channelItems$ | async">
     {{channel.name}}
+    <button class="btn btn-link btn-sm" type="button" (click)="channelService.removeChannel(channel.$key)">delete</button>
   </div>
   <div class="col-xs-12">
     <div class="input-group">
@@ -17,7 +18,7 @@
         required
         placeholder="Channel Name...">
       <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button" (click)="channelService.createChannel(newChannelName)">+ Add</button>
+        <button class="btn btn-secondary" type="button" (click)="channelService.createChannel(newChannelName);clear();">+ Add</button>
       </span>
     </div>
     <div class="col-xs-12 alert alert-info">

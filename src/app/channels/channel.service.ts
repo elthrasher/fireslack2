@@ -30,4 +30,8 @@ export class ChannelService {
   createChannel(title: string): Promise<any> {
     return this.channelItems$.push(new Channel(title));
   }
+
+  removeChannel(key: string): Promise<any> {
+    return this.channelItems$.remove(key);
+  }
 }
